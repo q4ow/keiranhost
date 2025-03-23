@@ -49,10 +49,12 @@ export default function FileCard({ file, index }: FileCardProps) {
           <div className="mb-4 flex-grow" />
         )}
         <div className="flex items-center justify-between text-sm text-slate-400">
-          <div className="flex items-center space-x-2">
-            <FileType2 className="h-4 w-4" />
-            <span>{formatFileSize(file.fileSize)}</span>
-          </div>
+            {file.fileSize > 0 && (
+            <div className="flex items-center space-x-2">
+              <FileType2 className="h-4 w-4" />
+              <span>{formatFileSize(file.fileSize)}</span>
+            </div>
+            )}
           <div className="flex items-center space-x-2">
             <Download className="h-4 w-4" />
             <span>{file.downloads} downloads</span>

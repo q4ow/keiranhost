@@ -75,16 +75,16 @@ export default function FilePage() {
         {file.description && (
           <p className="text-slate-400 mb-6">{file.description}</p>
         )}
-
-        { file.fileSize > 0 && (
-          <div className="flex items-center space-x-3 text-slate-300">
-            <FileType2 className="h-5 w-5 text-blue-400" />
-            <div>
-              <p className="text-sm text-slate-400">Size</p>
-              <p>{formatFileSize(file.fileSize)}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          { file.fileSize > 0 && (
+            <div className="flex items-center space-x-3 text-slate-300">
+              <FileType2 className="h-5 w-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-slate-400">Size</p>
+                <p>{formatFileSize(file.fileSize)}</p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
           <div className="flex items-center space-x-3 text-slate-300">
             <Download className="h-5 w-5 text-blue-400" />
@@ -110,6 +110,7 @@ export default function FilePage() {
         >
           Download File
         </a>
+      </div>
     </motion.div>
   );
 }

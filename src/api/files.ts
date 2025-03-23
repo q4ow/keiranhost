@@ -91,5 +91,12 @@ export const getDownloadUrl = (id: string): string => {
 };
 
 export const hasViewableThumbnail = (mimeType: string): boolean => {
-  return mimeType.startsWith('image/');
+  const viewableTypes = [
+    'image/jpeg',
+    'image/png',
+    'image/gif',
+    'image/webp',
+    'image/svg+xml'
+  ];
+  return viewableTypes.includes(mimeType);
 };

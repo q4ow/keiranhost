@@ -59,7 +59,7 @@ export default function FilePage() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-4xl mx-auto my-64"
+      className="max-w-4xl mx-auto my-24"
     >
       {file.thumbnailUrl && (
         <img

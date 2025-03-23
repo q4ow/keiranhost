@@ -46,7 +46,7 @@ export default function FileCard({ file, index }: FileCardProps) {
         {file.description ? (
           <p className="text-slate-400 mb-4 line-clamp-2 flex-grow">{file.description}</p>
         ) : (
-          <div className="mb-4 flex-grow" />
+          <div className="mb-4 flex-grow line-clamp-2" />
         )}
         <div className="flex items-center justify-between text-sm text-slate-400">
             {file.fileSize > 0 && (

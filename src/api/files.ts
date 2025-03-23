@@ -1,6 +1,6 @@
 import { FileItem } from '../types';
 
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://api.keiran.tech';
 
 export const getFiles = async (): Promise<FileItem[]> => {
   try {
